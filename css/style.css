@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins&family=Roboto:wght@400;500;900&display=swap');
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(62,122,233);
+  background: radial-gradient(circle, rgba(62,122,233,1) 0%, rgba(69,111,232,1) 1%, rgba(2,0,36,1) 100%);
+}
+
+
+/*============================== 
+--------- Score board ----------
+==============================*/
+main .scoreBoard {
+  width: 400px;
+  height: 40px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+main .scoreBoard:before,
+main .scoreBoard:after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 25px;
+  border: 1px solid #fff;
+  /* background-color: #fff; */
+  border-radius: 5px;
+  top: -1px;
+}
+
+main .scoreBoard:before {
+  transform: skewX(-20deg);
+  border-right-color: transparent;
+  left: -15px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+main .scoreBoard:after {
+  transform: skewX(20deg);
+  border-left-color: transparent;
+  right: -15px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+main .scoreBoard .gameTitle {
+  position: absolute;
+  text-align: center;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  width: fit-content;
+  height: fit-content;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+main .scoreBoard .gameTitle:before,
+main .scoreBoard .gameTitle:after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  top: 0;
+}
+
+main .scoreBoard .gameTitle:before {
+  transform: skewX(-10deg);
+  left: -13px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+main .scoreBoard .gameTitle:after {
+  transform: skewX(10deg);
+  right: -13px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+main .scoreBoard .gameTitle span {
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+  color: #222;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+main .scoreBoard .player {
+  width: 100px;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-weight: bold;
+}
+
+main .scoreBoard .player:nth-child(1) {
+  flex-direction: row-reverse;
+}
+
+main .scoreBoard .player span {
+  display: inline-block;
+  height: 100%;
+  background-color: #fff;
+  line-height: 40px;
+  padding: 0 8px;
+  color: #222;
+  font-size: 20px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/*============================== 
+-------- Action button ---------
+==============================*/
+main .action {
+  margin-top: 100px;
+  display: flex;
+}
+
+main .action button {
+  background: #fff;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  border: 5px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin: 5px;
+}
+
+main .action button img {
+  width: 35px;
+}
+
+main .action button:hover {
+  background-color: #eee;
+}
+
+/* main .action button#rock {
+  border-color: #e64c9a;
+}
+
+main .action button#paper {
+  border-color: #6291cf;
+}
+
+main .action button#scissors {
+  border-color: #fea31b;
+} */
+
+/*============================== 
+------------ Screen ------------
+==============================*/
+main .screen {
+  display: flex;
+  width: 446px;
+  margin-top: 100px;
+  justify-content: space-around;
+  align-items: center;
+}
+main .screen img {
+  width: 80px;
+}
+
+main .screen p {
+  font-size: 18px;
+  color: #222;
+}

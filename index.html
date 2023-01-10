@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    
+    <div class="scoreBoard">
+      <div class="player">YOU <span id="user">0</span></div>
+      <div class="gameTitle">
+        <span>Rock<br>Paper<Br>Scissors</span>
+      </div>
+      <div class="player">COMP <span id="comp">0</span></div>
+    </div>
+
+    <div class="screen">
+      <img id="imgUser" src="assets/mark.png">
+      <p id="text">Start!</p>
+      <img id="imgComp" src="assets/mark.png">
+    </div>
+
+    <div class="action">
+      <button id="rock" title="Rock"><img src="assets/01.png"></button>
+      <button id="paper" title="Paper"><img src="assets/02.png"></button>
+      <button id="scissors" title="Scissors"><img src="assets/03.png"></button>
+      <button id="random" title="Random Select"><img src="assets/random.png"></button>
+      <button id="reset" title="Reset"><img src="assets/reset.png"></button>
+    </div>
+
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
